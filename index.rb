@@ -12,5 +12,21 @@ def bubble_sort(my_array)
   my_array
 end
 
-x = [6, 3, 4, 1, 6, 5, 0, 7]
+x = [4, 3, 78, 2, 0, 2]
 p bubble_sort(x)
+
+def bubble_sort_by(my_array)
+  i = 0
+  j = 0
+  until i == my_array.length
+    j = i + 1
+    while j < my_array.length
+      my_array[i], my_array[j] = my_array[j], my_array[i] if yield(my_array[i], my_array[j]).positive?
+      j += 1
+    end
+    i += 1
+  end
+  my_array
+end
+
+p bubble_sort_by(%w[hi hello hey]) { |left, right| left.length - right.length }
