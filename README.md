@@ -6,7 +6,15 @@
 - Ruby
 
 ## Getting Started
-Clone this repo on your local machine
+- Clone this repo on your local machine
+- Run the command `bundle install` in your terminal
+- Insert the lines below any where in your index.rb file
+```
+x = [4, 3, 78, 2, 0, 2, 98, 6]
+  p bubble_sort(x)
+  p bubble_sort_by(%w[hi hello hey]) { |left, right| left.length - right.length }
+
+```
 
 ### Prerequisites
 To make this repository working in your local machine you need [ruby](https://rubyinstaller.org/) installed.
